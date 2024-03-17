@@ -15,9 +15,9 @@ app.config['SESSION_TYPE']='filesystem'
 comprehend = boto3.client('comprehend')
 transcribe = boto3.client('transcribe')
 textract = boto3.client('textract')
-openai.api_key = ''
+openai.api_key = '#'
 
-mydb = mysql.connector.connect(host='localhost', user='root', password='admin', db='nlp')
+mydb = mysql.connector.connect(host='localhost', user='root', password='$', db='#')
 cursor = mydb.cursor()
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS users (
@@ -236,7 +236,7 @@ def speechToText():
                 if 'audioFile' not in request.files:
                     return jsonify({'error': 'No audio file provided'}), 400
                 audio_file = request.files['audioFile']
-                bucket_name = 'awsnlp'
+                bucket_name = '#'
                 s3_client = boto3.client('s3')
                 s3_client.upload_fileobj(audio_file, bucket_name, audio_file.filename)
                 audio_file_uri = f's3://{bucket_name}/{audio_file.filename}'
