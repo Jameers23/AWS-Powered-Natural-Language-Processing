@@ -196,7 +196,7 @@ The AWS-Powered NLP application has been successfully developed and deployed, of
 ![Chatbot Page](static/chatbot.png)
 
 ### 11. History Page
-![Chatbot Page](static/chatbot.png)
+![Chatbot Page](static/history.png)
 
 ### 12. AboutUs Page
 ![AboutUs Page](static/aboutus.png)
